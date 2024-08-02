@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <title>List of Fruits</title>
+  </head>
+  <body>
+    <h1>More about <%= fruit.name %></h1>
+    <p>Fruit: <%= fruit.name %></p>
+    <p>Is it ready to eat?: <%= fruit.isRipe ? "Yes" : "No" %></p>
+    <a href="/fruits/<%= fruit._id %>/edit">Edit</a>
+    <form action="/fruits/<%= fruit._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+    <br />
+    <a href="/fruits">Back to full list</a>
+  </body>
+</html>

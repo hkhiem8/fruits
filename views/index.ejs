@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <title>List of Fruits</title>
+  </head>
+  <body>
+    <h1>List of Fruits</h1>
+    <ul>
+      <% fruits.forEach(fruit => { %>
+      <li>
+        <h3><%= fruit.name %></h3>
+        <p>Is it ready to eat?: <%= fruit.isRipe ? "Yes" : "No" %></p>
+        <a href="/fruits/<%= fruit._id %>">More details</a>
+      </li>
+      <% }); %>
+    </ul>
+    <a href="/fruits/new">Log a new fruit</a>
+  </body>
+</html>
